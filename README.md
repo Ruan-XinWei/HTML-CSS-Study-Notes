@@ -55,6 +55,9 @@
     - [单选框、复选框](#单选框复选框)
     - [下拉菜单](#下拉菜单)
     - [提交按钮、重置按钮](#提交按钮重置按钮)
+    - [文件](#文件)
+    - [日期](#日期)
+    - [区间域](#区间域)
   - [CSS3介绍](#css3介绍)
     - [认识CSS样式](#认识css样式)
     - [短语样式](#短语样式)
@@ -676,6 +679,37 @@ laber标签中for属性的值必须与相关的控件id值相同
    2. 当type = "reset"时，为重置按钮。
 2. value：按钮上的值；
 3. name：按钮控件名。
+
+### 文件
+
+```html
+<input type="file" name="myfile" accept="文件类型">
+```
+
+1. accept
+   1. 缺省: 所有文件
+   2. image/*: 图像文件
+   3. audio/*: 声音文件
+   4. video/*: 视频文件
+   5. MIME_type: 某个有效MIME类型，不带参数
+
+### 日期
+
+```html
+<input type="date" name="mydate">
+```
+
+### 区间域
+
+```html
+<input type="range" min="0.0" max="100.0" step="0.5" value="60.0"
+id="score" name="score" >
+```
+
+1. min: 最小值
+2. max: 最大值
+3. step: 单步长
+4. value: 初始值
 
 ## CSS3介绍
 
