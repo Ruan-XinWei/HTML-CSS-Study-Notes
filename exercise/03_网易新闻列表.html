@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>网易新闻列表</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+
+        .sport {
+            margin: 150px 20px 0px auto;
+            width: 300px;
+            height: 323px;
+            border-top: 1px solid #DDDDDD;
+            /* overflow: hidden; */
+            background-color: #ffffff;
+        }
+
+        .sport a{
+            text-decoration: none;
+        }
+
+        .sport .title {
+            height: 42px;
+        }
+
+        .sport .title .h2 {
+            width: 32px;
+            height: 24px;
+            line-height: 24px;
+            padding: 6px 0px 10px;
+            border-top: 1px red solid;
+            margin-top: -1px;
+        }
+
+        .sport .title a {
+            display: block;
+            width: 32px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .sport .title a:hover {
+            color: red;
+        }
+
+        .sport .img {
+            height: 150px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .sport .img h3 {
+            color: #ffffff;
+            margin-top: -25px;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+
+        .sport .introduce .ulclass li::before {
+            display: inline-block;
+            content: "■";
+            font-size: 12px;
+            color: #c4c2c2;
+            margin-right: 6px;
+        }
+
+        .sport .introduce .ulclass .liclass {
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .sport .introduce .ulclass .liclass a {
+            color: #666666;
+            font-size: 14px;
+        }
+
+        .sport .introduce .ulclass .liclass a:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sport">
+        <div class="title">
+            <h2 class="h2">
+                <a href="javascript:;">体育</a>
+            </h2>
+        </div>
+        <div class="img">
+            <a href="javascript:;">
+                <img
+                    src="https://cms-bucket.ws.126.net/2020/0814/d904574bj00qf1bo2001fc000go00b4c.jpg?imageView&thumbnail=300y150&type=webp">
+                <h3>利指导上线！开拓者超惊险进附加赛</h3>
+            </a>
+        </div>
+        <div class="introduce">
+            <ul class="ulclass">
+                <li class="liclass">
+                    <a href="javascript:;">乔治:我爱LA 喜欢和LBJ一起打球</a>
+                </li>
+                <li class="liclass">
+                    <a href="javascript:;">格林:3年前降薪就在等KD</a>
+                    <a href="javascript:;">特制T恤嘲讽LBJ</a>
+                </li>
+                <li class="liclass">
+                    <a href="javascript:;">塔克4000双鞋让保罗羡慕嫉妒 乔丹震惊</a>
+                </li>
+                <li class="liclass">
+                    <a href="javascript:;">CBA下季新赛制:常规赛4组循环 增至46轮</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

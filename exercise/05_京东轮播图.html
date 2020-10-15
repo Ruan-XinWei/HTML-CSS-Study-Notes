@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>京东轮播图</title>
+</head>
+<link rel="stylesheet" href="../reset.css">
+<style>
+    a{
+        text-decoration: none;
+    }
+
+    .img {
+        width: 590px;
+        height: 470px;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+    }
+
+    .img .ulclass .liclass {
+        position: absolute;
+    }
+
+    .img .ulclass .liclass:first-child{
+        z-index: 1;
+    }
+
+    .img .ulclass .liclass img {
+        width: 590px;
+        height: 470px;
+    }
+
+    .img .button {
+        background-color: rgba(255, 255, 255, .0);
+        z-index: 9999;
+        position: absolute;
+        bottom: 15px;
+        left: 25px;
+    }
+
+    .img .button a{
+        background-color: rgba(255, 255, 255, .5);
+        border: 2px solid transparent;
+        width: 15px;
+        height: 15px;
+        display: block;
+        float: left;
+        background-clip: content-box;
+        border-radius: 50%;
+        margin: 3px;
+    }
+
+    .img .button a:hover{
+        background-color: #fff;
+        border: 2px solid  rgba(255, 255, 255, .5);
+    }
+
+</style>
+
+<body>
+    <div class="img">
+        <ul class="ulclass">
+            <li class="liclass">
+                <a href="javascript:;">
+                    <img src="./image/019d9f5f9185f29b.jpg.webp" alt="img1">
+                </a>
+            </li>
+            <li class="liclass">
+                <a href="javascript:;">
+                    <img src="./image/1.jpg" alt="img2">
+                </a>
+            </li>
+            <li class="liclass">
+                <a href="javascript:;">
+                    <img src="./image/15ad6df3fb88ca14.jpg.webp" alt="img3">
+                </a>
+            </li>
+            <li class="liclass">
+                <a href="javascript:;">
+                    <img src="./image/2.jpg" alt="img4">
+                </a>
+            </li>
+            <li class="liclass">
+                <a href="javascript:;">
+                    <img src="./image/5ff2f3a6323bb5d8.jpg.webp" alt="img5">
+                </a>
+            </li>
+            <li class="liclass">
+                <a href="javascript:;">
+                    <img src="./image/a463b590ec214358.jpg.webp" alt="img6">
+                </a>
+            </li>
+            <li class="liclass">
+                <a href="javascript:;">
+                    <img src="./image/ac655d28718de712.jpg.webp" alt="img7">
+                </a>
+            </li>
+            <li class="liclass">
+                <a href="javascript:;">
+                    <img src="./image/ef28dece0ad3f01b.jpg.webp" alt="img8">
+                </a>
+            </li>
+        </ul>
+        <div class="button">
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </div>
+</body>
+
+</html>
