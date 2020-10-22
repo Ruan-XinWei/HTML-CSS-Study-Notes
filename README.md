@@ -93,13 +93,8 @@
     - [font样式缩写](#font样式缩写)
     - [图标字体](#图标字体)
   - [CSS3文本样式](#css3文本样式)
-    - [文本修饰](#文本修饰)
-    - [首行缩进](#首行缩进)
-    - [行高](#行高)
-    - [字符间距](#字符间距)
-    - [水平对齐](#水平对齐)
-    - [元素垂直对齐](#元素垂直对齐)
-    - [设置文本省略号表示多余](#设置文本省略号表示多余)
+    - [文本属性](#文本属性)
+    - [列表属性](#列表属性)
     - [长度值](#长度值)
   - [CSS3表格样式](#css3表格样式)
     - [表格边框样式](#表格边框样式)
@@ -1339,92 +1334,86 @@ body{
 
 ## CSS3文本样式
 
-### 文本修饰
+### 文本属性
+1. 文本修饰
+    ```css
+    span{
+        text-decoration: none;	/*默认标准文本*/
+        text-decoration: underline;	/*文本下划线*/
+        text-decoration: overline;	/*文本上一条线*/
+        text-decoration: line-through;	/*穿过文本的一条线*/
+    }
+    ```
+2. 首行缩进
+    ```css
+    p{
+        text-indent: 2pm;
+    }
+    ```
+    2em的意思就是文字的2倍大小。
+3. 行高
+   1. 行高指的是文字占有的实际高度
+   2. 可以通过line-height来设置行高
+      1. 可以直接指定一个大小（px，em）
+      2. 也可以设置一个整数，这个整数就是字体大小的倍数
+   3. 行高经常用来设置文字的行间距，行间距 = 行高 - 字体大小
+   4. 字体框，字体框就是字体存在的格子，设置font-size实际上就是设置字体框的高度
+   5. 行高会在字体框的上下平均分配
+   6. 可以将行高设置为高度一样的值，可以使得单行文字在一个元素中垂直居中
+        ```css
+        p{
+            line-height: 1.5em;
+        }
+        ```
+4. 字符间距
+    1. 中文字、字母间距
+        ```css
+        p{
+            letter-spacing: 20px;
+        }
+        ```
+    2. 单词间距
+        ```css
+        p{
+            word-spacing: 20px;
+        }
+        ```
+5. 水平对齐
+    ```css
+    p{
+        text-align: center;	/*居中*/
+        text-align: left;	/*居左*/
+        text-align: right;	/*居右*/
+    }
+    ```
+6. 元素垂直对齐
+   1. 使用vertical-align 设置元素垂直对齐的方式
+   2. baseline 默认值，基线对齐
+   3. top 顶部对齐
+   4.  bottom 底部对齐
+   5.  middle 居中对齐
+   6.  直接指定长度值，如verticla-align: 10px;
+7.  设置文本省略号表示多余
+    1. white-space 设置网页如何处理空白
+       1. normal 正常
+       2. nowrap 不换行
+       3. pre 保留空白
+    2. 需要满足四个条件（缺一不可）
+       1. 设置一个宽度 width
+       2. 设置white-space: nowrap，使得文本在一行上
+       3. 设置超过宽度的部分隐藏 overflow: hidden
+       4. 设置文本超出的部分显示省略号 text-overflow: ellipsis
+8. direction：设置文本方向
+9. text-indent：首行缩进
+10. text-transform：控制元素中的字母（字母大小写）
+11. text-align-last：设置如何对齐最后一行或紧挨着强制换行符之前的行
 
-```css
-span{
-    text-decoration: none;	/*默认标准文本*/
-    text-decoration: underline;	/*文本下划线*/
-    text-decoration: overline;	/*文本上一条线*/
-    text-decoration: line-through;	/*穿过文本的一条线*/
-}
-```
+### 列表属性
 
-### 首行缩进
-
-```css
-p{
-    text-indent: 2pm;
-}
-```
-
-2em的意思就是文字的2倍大小。
-
-### 行高
-
-1. 行高指的是文字占有的实际高度
-2. 可以通过line-height来设置行高
-   1. 可以直接指定一个大小（px，em）
-   2. 也可以设置一个整数，这个整数就是字体大小的倍数
-3. 行高经常用来设置文字的行间距，行间距 = 行高 - 字体大小
-4. 字体框，字体框就是字体存在的格子，设置font-size实际上就是设置字体框的高度
-5. 行高会在字体框的上下平均分配
-6. 可以将行高设置为高度一样的值，可以使得单行文字在一个元素中垂直居中
-
-```css
-p{
-    line-height: 1.5em;
-}
-```
-
-### 字符间距
-
-1. 中文字、字母间距
-
-   ```css
-   p{
-       letter-spacing: 20px;
-   }
-   ```
-
-2. 单词间距
-
-   ```css
-   p{
-       word-spacing: 20px;
-   }
-   ```
-
-### 水平对齐
-
-```css
-p{
-    text-align: center;	/*居中*/
-    text-align: left;	/*居左*/
-    text-align: right;	/*居右*/
-}
-```
-
-### 元素垂直对齐
-
-1. 使用vertical-align 设置元素垂直对齐的方式
-2. baseline 默认值，基线对齐
-3. top 顶部对齐
-4. bottom 底部对齐
-5. middle 居中对齐
-6. 直接指定长度值，如verticla-align: 10px;
-
-### 设置文本省略号表示多余
-
-1. white-space 设置网页如何处理空白
-   1. normal 正常
-   2. nowrap 不换行
-   3. pre 保留空白
-2. 需要满足四个条件（缺一不可）
-   1. 设置一个宽度 width
-   2. 设置white-space: nowrap，使得文本在一行上
-   3. 设置超过宽度的部分隐藏 overflow: hidden
-   4. 设置文本超出的部分显示省略号 text-overflow: ellipsis
+1. list-style: 简写属性
+2. list-style-image：将图像设置为列表项标志
+3. list-style-position：设置列表中列表项标志的位置
+4. list-style-type：设置列表项标志的类型
 
 ### 长度值
 
